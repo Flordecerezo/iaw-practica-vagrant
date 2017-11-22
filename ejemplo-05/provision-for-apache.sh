@@ -38,6 +38,9 @@ sed -i -e "s/localhost/$DB_HOST/" wp-config.php
 echo "define('WP_HOME','http://192.168.33.10/wordpress');" >> wp-config.php
 echo "define('WP_SITEURL','http://192.168.33.10');" >> wp-config.php
 
+# Configure the security keys
+curl https://api.wordpress.org/secret-key/1.1/salt/ >> wp-config.php
+
 # Create uploads directory
 cd /var/www/html
 mkdir -p wordpress/wp-content/uploads
