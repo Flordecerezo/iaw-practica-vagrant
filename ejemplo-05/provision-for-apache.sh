@@ -17,6 +17,7 @@ apt-get install -y unzip
 
 # Download and unzip Wordpress
 cd /var/www/html
+rm -f latest.zip
 wget https://wordpress.org/latest.zip
 unzip -o latest.zip
 
@@ -33,13 +34,17 @@ sed -i -e "s/username_here/$DB_WP_USER/" wp-config.php
 sed -i -e "s/password_here/$DB_WP_PASSWORD/" wp-config.php
 sed -i -e "s/localhost/$DB_HOST/" wp-config.php
 
+# Configure WP_HOME and WP_SITEURL
+echo "define('WP_HOME','http://192.168.33.10/wordpress');" >> wp-config.php
+echo "define('WP_SITEURL','http://192.168.33.10');" >> wp-config.php
+
 # Create uploads directory
 cd /var/www/html
 mkdir -p wordpress/wp-content/uploads
 chown -R www-data:www-data *
 
 # Configure Wordpress to rewrite wordpress subdirectory with permalinks
-rm index.html
-mv wordpress/index.php .
+rm -f index.html
+cp wordpress/index.php .
 sed -i -e "s/wp-blog-header.php/wordpress\/wp-blog-header.php/" index.php
 cp /vagrant/htaccess .htaccess
