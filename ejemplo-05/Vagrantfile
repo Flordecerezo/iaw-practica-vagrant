@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "web-balancer"
     #app.vm.network "public_network"
     app.vm.network "private_network", ip: "192.168.33.10"
-    app.vm.provision "shell", path: "provision-for-balancer.sh"
+    app.vm.provision "shell", path: "provision/provision-for-balancer.sh"
   end
 
   # Apache HTTP Server
@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "web-1"
     #app.vm.network "public_network"
     app.vm.network "private_network", ip: "192.168.33.11"
-    app.vm.provision "shell", path: "provision-for-apache.sh"
+    app.vm.provision "shell", path: "provision/provision-for-apache.sh"
   end
 
   # Apache HTTP Server
@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "web-2"
     #app.vm.network "public_network"
     app.vm.network "private_network", ip: "192.168.33.12"
-    app.vm.provision "shell", path: "provision-for-apache.sh"
+    app.vm.provision "shell", path: "provision/provision-for-apache.sh"
   end
 
   # MySQL Server
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "db"
     #app.vm.network "public_network"
     app.vm.network "private_network", ip: "192.168.33.13"
-    app.vm.provision "shell", path: "provision-for-mysql.sh"
+    app.vm.provision "shell", path: "provision/provision-for-mysql.sh"
   end
 
 end

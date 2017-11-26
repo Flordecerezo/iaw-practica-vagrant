@@ -50,4 +50,4 @@ chown -R www-data:www-data *
 rm -f index.html
 cp wordpress/index.php .
 sed -i -e "s/wp-blog-header.php/wordpress\/wp-blog-header.php/" index.php
-cp /vagrant/htaccess .htaccess
+cp /vagrant/config/htaccess .htaccess

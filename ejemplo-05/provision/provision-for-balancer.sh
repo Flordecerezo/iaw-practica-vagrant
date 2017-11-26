@@ -20,7 +20,7 @@ a2enmod proxy_html
 a2enmod lbmethod_byrequests
 
 # Configure Apache as a Reverse Proxy 
-cp /vagrant/000-default.conf /etc/apache2/sites-enabled
+cp /vagrant/config/000-default.conf /etc/apache2/sites-enabled
 
 # Restarting Apache
 /etc/init.d/apache2 restart
