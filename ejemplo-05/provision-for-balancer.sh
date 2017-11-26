@@ -5,7 +5,7 @@ apt-get update
 # Install Apache and PHP packages
 apt-get install -y apache2
 apt-get install -y php libapache2-mod-php php-mysql
-sudo /etc/init.d/apache2 restart
+/etc/init.d/apache2 restart
 
 # Enabling modules
 a2enmod proxy
