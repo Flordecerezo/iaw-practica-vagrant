@@ -1,0 +1,8 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "Sliim/kali-linux-2.0-amd64"
+  config.ssh.private_key_path = 'pentest-env'
+  config.ssh.username = 'root'
+end
