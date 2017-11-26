@@ -8,11 +8,13 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 
 ## Ejemplos
 
-1. Configuración para una máquina virtual con [Ubuntu 16.04.3 LTS (Xenial Xerus)][2].
-2. Configuración para compartir un directorio entre el host anfitrión y la máquina virtual.
-3. Configuración para crear una máquina virtual con [Apache HTTP Server][3], IP estática y directorio compartido.
-4. Configuración para dos máquinas virtuales: [Apache HTTP Server][3] y [MySQL Server][4], con aprovisionamiento vía shell.
-5. Configuración para una infraestructura para [WordPress][5] formada por un balanceador de carga, dos frontales web con [Apache HTTP Server][3] y un *back-end* con [MySQL Server][4], con aprovisionamiento vía shell.
+1. Máquina virtual con [Ubuntu 16.04.3 LTS (Xenial Xerus)][2].
+2. Directorio compartido entre el host anfitrión y la máquina virtual.
+3. Máquina virtual con [Apache HTTP Server][3], IP estática y directorio compartido.
+4. Dos máquinas virtuales: [Apache HTTP Server][3] y [MySQL Server][4], con aprovisionamiento vía shell.
+5. Infraestructura para [WordPress][5] formada por un balanceador de carga, dos frontales web con [Apache HTTP Server][3] y un *back-end* con [MySQL Server][4], con aprovisionamiento vía shell.
+6. Máquina virtual con [Kali Linux][6], una distribución diseñada para la auditoría y seguridad informática.
+7. Máquina virtual con [Jekyll][7], generador de sitios web estáticos a partir de contenido [Markdown][8].
 
 
 [1]: https://www.vagrantup.com
@@ -20,3 +22,6 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 [3]: https://httpd.apache.org
 [4]: https://dev.mysql.com/downloads/mysql/
 [5]: https://wordpress.org
+[6]: https://www.kali.org
+[7]: https://jekyllrb.com
+[8]: https://daringfireball.net/projects/markdown/
