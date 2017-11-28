@@ -39,7 +39,7 @@ echo "define('WP_HOME','http://192.168.33.10');" >> wp-config.php
 echo "define('WP_SITEURL','http://192.168.33.10/wordpress');" >> wp-config.php
 
 # Remove the lines related with the security keys
-sudo sed -i "/put your unique phrase here/d" wp-config.php
+sed -i "/put your unique phrase here/d" wp-config.php
 
 # Add new values for the security keys
 curl https://api.wordpress.org/secret-key/1.1/salt/ >> wp-config.php
