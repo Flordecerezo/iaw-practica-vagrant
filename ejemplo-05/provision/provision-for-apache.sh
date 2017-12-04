@@ -35,14 +35,20 @@ sed -i -e "s/password_here/$DB_WP_PASSWORD/" wp-config.php
 sed -i -e "s/localhost/$DB_HOST/" wp-config.php
 
 # Configure WP_HOME and WP_SITEURL
+#
+# WP_HOME refer to the "Site Address (URL)"
+# or what you want regular visitors to type in their browser.
+# WP_SITEURL refer to the "WordPress Address (URL)"
+# or the address where your WordPress core files reside.
+
 echo "define('WP_HOME','http://192.168.33.10');" >> wp-config.php
 echo "define('WP_SITEURL','http://192.168.33.10/wordpress');" >> wp-config.php
 
-# Remove the lines related with the security keys
-sed -i "/put your unique phrase here/d" wp-config.php
-
-# Add new values for the security keys
-curl https://api.wordpress.org/secret-key/1.1/salt/ >> wp-config.php
+# Add new values for the security keys.
+# Replace / by _ in order to avoid confusion with the delimiter char /
+SECRET_KEYS=`curl https://api.wordpress.org/secret-key/1.1/salt/`
+SECRET_KEYS=`echo $SECRET_KEYS | tr / _`
+sed -i "/#@-/a $SECRET_KEYS" wp-config.php
 
 # Create uploads directory
 cd /var/www/html
