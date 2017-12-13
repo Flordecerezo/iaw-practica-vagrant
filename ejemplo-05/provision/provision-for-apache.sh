@@ -41,8 +41,14 @@ sed -i -e "s/localhost/$DB_HOST/" wp-config.php
 # WP_SITEURL refer to the "WordPress Address (URL)"
 # or the address where your WordPress core files reside.
 
-echo "define('WP_HOME','http://192.168.33.10');" >> wp-config.php
-echo "define('WP_SITEURL','http://192.168.33.10/wordpress');" >> wp-config.php
+WP_HOME="define('WP_HOME','http://192.168.33.10');"
+WP_SITEURL="define('WP_SITEURL','http://192.168.33.10/wordpress');"
+
+sed -i "/<?php/a $WP_SITEURL" wp-config.php
+sed -i "/<?php/a $WP_HOME" wp-config.php
+
+# Remove the lines related with the security keys
+sed -i "/put your unique phrase here/d" wp-config.php
 
 # Add new values for the security keys.
 # Replace / by _ in order to avoid confusion with the delimiter char /
@@ -60,3 +66,6 @@ rm -f index.html
 cp wordpress/index.php .
 sed -i -e "s/wp-blog-header.php/wordpress\/wp-blog-header.php/" index.php
 cp /vagrant/config/htaccess .htaccess
+
+chown -R www-data:www-data index.php
+chown -R www-data:www-data .htaccess
