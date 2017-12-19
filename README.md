@@ -15,6 +15,7 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 5. Infraestructura para [WordPress][5] formada por un balanceador de carga, dos frontales web con [Apache HTTP Server][3] y un *back-end* con [MySQL Server][4], con aprovisionamiento vía shell.
 6. Máquina virtual con [Kali Linux][6], una distribución diseñada para la auditoría y seguridad informática.
 7. Máquina virtual con [Jekyll][7], generador de sitios web estáticos a partir de contenido [Markdown][8].
+8. Máquina virtual con [Mosquitto][9], un  *broker* [MQTT][10] *open source* usado para la comunicación entre dispositivos en el [IoT][11].
 
 
 [1]: https://www.vagrantup.com
@@ -25,3 +26,6 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 [6]: https://www.kali.org
 [7]: https://jekyllrb.com
 [8]: https://daringfireball.net/projects/markdown/
+[9]: https://mosquitto.org
+[10]: http://mqtt.org
+[11]: https://es.wikipedia.org/wiki/Internet_de_las_cosas
