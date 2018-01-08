@@ -9,7 +9,7 @@ apt-get install -y nginx
 apt-get install -y php-fpm php-mysql
 
 # Configure php for nginx
-sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pahinfo=0/" /etc/php/7.0/fpm/php.ini
+sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.0/fpm/php.ini
 systemctl restart php7.0-fpm
 
 # Copy configuration file for nginx
