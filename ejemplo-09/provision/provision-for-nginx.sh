@@ -15,3 +15,6 @@ systemctl restart php7.0-fpm
 # Copy configuration file for nginx
 cp /vagrant/config/nginx.default /etc/nginx/sites-available/default
 systemctl reload nginx
+
+# Check the installation
+cp /vagrant/test-php/info.php /var/www/html
