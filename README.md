@@ -16,7 +16,7 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 6. Máquina virtual con [Kali Linux][6], una distribución diseñada para la auditoría y seguridad informática.
 7. Máquina virtual con [Jekyll][7], generador de sitios web estáticos a partir de contenido [Markdown][8].
 8. Máquina virtual con [Mosquitto][9], un  *broker* [MQTT][10] *open source* usado para la comunicación entre dispositivos en el [IoT][11].
-9. Máquina virtual con la pila [LEMP][12].
+9. Máquina virtual con [WordPress][5] sobre una pila [LEMP][12].
 
 
 [1]: https://www.vagrantup.com
