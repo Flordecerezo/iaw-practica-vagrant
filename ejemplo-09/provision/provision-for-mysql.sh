@@ -16,11 +16,11 @@ sed -i -e "s/127.0.0.1/0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 mysql -uroot mysql -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '$DB_ROOT_PASSWD';"
 mysql -uroot mysql -p$DB_ROOT_PASSWD <<< "FLUSH PRIVILEGES;"
 
-# Create example database
-DB_NAME=example
-DB_USER=wp_user;
-DB_PASSWORD=password;
-mysql -uroot -p$DB_ROOT_PASSWD <<< "DROP DATABASE IF EXISTS $DB_NAME;"
-mysql -uroot -p$DB_ROOT_PASSWD <<< "CREATE DATABASE $DB_NAME CHARACTER SET utf8;"
-mysql -uroot -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'%' IDENTIFIED BY '$DB_PASSWORD';"
+# Create Wordpress database
+DB_WP_NAME=wordpress
+DB_WP_USER=wp_user;
+DB_WP_PASSWORD=wp_password;
+mysql -uroot -p$DB_ROOT_PASSWD <<< "DROP DATABASE IF EXISTS $DB_WP_NAME;"
+mysql -uroot -p$DB_ROOT_PASSWD <<< "CREATE DATABASE $DB_WP_NAME CHARACTER SET utf8;"
+mysql -uroot -p$DB_ROOT_PASSWD <<< "GRANT ALL PRIVILEGES ON $DB_WP_NAME.* TO $DB_WP_USER@'%' IDENTIFIED BY '$DB_WP_PASSWORD';"
 mysql -uroot -p$DB_ROOT_PASSWD <<< "FLUSH PRIVILEGES;"
