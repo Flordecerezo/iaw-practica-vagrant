@@ -17,6 +17,7 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 7. Máquina virtual con [Jekyll][7], generador de sitios web estáticos a partir de contenido [Markdown][8].
 8. Máquina virtual con [Mosquitto][9], un  *broker* [MQTT][10] *open source* usado para la comunicación entre dispositivos en el [IoT][11].
 9. Máquina virtual con [WordPress][5] sobre una pila [LEMP][12].
+10. Balanceador de carga con [Nginx][13].
 
 
 [1]: https://www.vagrantup.com
@@ -31,3 +32,4 @@ Colección de ejemplos de configuraciones para [Vagrant][1].
 [10]: http://mqtt.org
 [11]: https://es.wikipedia.org/wiki/Internet_de_las_cosas
 [12]: https://lemp.io
+[13]: https://nginx.org
